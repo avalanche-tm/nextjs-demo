@@ -1,0 +1,18 @@
+{
+  "NextJS React Component": {
+    "prefix": ["next-comp"],
+    "body": [
+      "function ${1:ComponentName}() {",
+      "  return (",
+      "    <>",
+      "      <div>${1:ComponentName}</div>",
+      "    </>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:ComponentName}"
+    ],
+    "scope": "typescriptreact",
+    "description": "Basic NextJS component."
+  }
+}
