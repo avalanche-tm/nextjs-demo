@@ -14,5 +14,19 @@
     ],
     "scope": "typescriptreact",
     "description": "Basic NextJS component."
+  },
+  "NextJS API Post Route": {
+    "prefix": ["next-api-post"],
+    "body": [
+      "import { NextRequest, NextResponse } from 'next/server'".
+      "",
+      "export async function POST(req: NextRequest, res: NextResponse) {",
+      "  const request = await req.json()",
+      "  const data = req.data",
+      "  return NextResponse.json({data:data})",
+      "}"
+    ],
+    "scope": "typescriptreact",
+    "description": "Simple NextJS API Post Route."
   }
 }

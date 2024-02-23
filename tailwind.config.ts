@@ -17,17 +17,20 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        base: '15px',
+        sm: ['0.9375rem', { lineHeight: '1.25rem' }],
+        '7.5xl': '5rem',
       },
       fontFamily: {
         sans: ['var(--font-roobert)'],
       },
+
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        'base-0': 'hsl(var(--base-0))',
         'base-100': 'hsl(var(--base-100))',
         'base-200': 'hsl(var(--base-200))',
         'base-300': 'hsl(var(--base-300))',
