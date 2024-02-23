@@ -28,6 +28,7 @@ module.exports = {
         'base-100': 'hsl(var(--base-100))',
         'base-200': 'hsl(var(--base-200))',
         'base-300': 'hsl(var(--base-300))',
+        'base-400': 'hsl(var(--base-400))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
