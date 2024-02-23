@@ -19,6 +19,9 @@ module.exports = {
       fontSize: {
         base: '15px',
       },
+      fontFamily: {
+        sans: ['var(--font-roobert)'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
