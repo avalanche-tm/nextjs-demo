@@ -1,5 +1,8 @@
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
+import Footer from './components/footer/footer'
+import Header from './components/header/header'
 import './globals.css'
 
 const font = Noto_Sans({ subsets: ['latin'] })
@@ -17,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={font.className}>{children}</body>
+      <body className={cn('container', font.className)}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }

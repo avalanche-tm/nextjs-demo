@@ -1,14 +1,5 @@
-import Footer from './components/footer/footer'
-import Header from './components/header/header'
+import { redirect } from 'next/navigation'
 
-function Home() {
-  return (
-    <>
-      <Header />
-      <main>Content</main>
-      <Footer />
-    </>
-  )
+export default function Home() {
+  redirect('/home')
 }
-
-export default Home
