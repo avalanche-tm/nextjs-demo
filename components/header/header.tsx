@@ -41,7 +41,7 @@ function Header() {
       </nav>
       <div className='flex flex-row gap-2 items-center'>
         <Button variant='secondary' className='rounded-full font-bold text-xl h-11'>
-          <Icon name='CryptoCoinThick' className='mr-1' />
+          <Icon name='CryptoCoinBold' className='mr-1' />
           <span>32</span>
         </Button>
         <Avatar asChild={true}>

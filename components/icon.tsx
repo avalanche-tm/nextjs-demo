@@ -1,14 +1,18 @@
 import CryptoCoinBold from '@assets/icons/crypto-coin-bold.svg'
 import CryptoCoin from '@assets/icons/crypto-coin.svg'
+import HeadBold from '@assets/icons/head-bold.svg'
 import Head from '@assets/icons/head.svg'
+import Heart from '@assets/icons/heart.svg'
 import Home from '@assets/icons/home.svg'
 import Send from '@assets/icons/send.svg'
 import Soundwave from '@assets/icons/soundwave.svg'
 
 export const icons = {
   CryptoCoin,
-  CryptoCoinThick: CryptoCoinBold,
+  CryptoCoinBold,
   Head,
+  Heart,
+  HeadBold,
   Home,
   Send,
   Soundwave,

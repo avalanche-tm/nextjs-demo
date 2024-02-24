@@ -18,6 +18,8 @@ module.exports = {
     extend: {
       fontSize: {
         sm: ['0.9375rem', { lineHeight: '1.25rem' }],
+        '4.5xl': '2.5rem',
+        '5.5xl': '3.5rem',
         '7.5xl': '5rem',
       },
       fontFamily: {
