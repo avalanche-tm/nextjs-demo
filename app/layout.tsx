@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import Footer from '@/components/footer/footer'
 import Header from '@/components/header/header'
 import './globals.css'
 
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={cn('container', font.variable, 'font-sans')}>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

@@ -35,7 +35,7 @@ function FeatureCard({ feature, href, className, borderless }: FeatureCardProps)
             className='object-cover hover:scale-110 transition duration-500'
           />
         </div>
-        <div className='p-4 pb-5 space-y-1'>
+        <div className={cn('p-4 pb-5 space-y-1', borderless && 'pl-0')}>
           <div className='flex flex-row items-center text-xl font-bold text-base-400'>
             {feature.community && <Icon name='HeadBold' className='mr-1' />}
             {feature.voice}
