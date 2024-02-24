@@ -17,7 +17,7 @@ function NavbarItem({ icon, href, children }: NavbarItemProps) {
     <Link
       href={href}
       className={cn(
-        'flex flex-row items-center gap-2 font-bold text-base-300 hover:text-base-200 transition',
+        'flex flex-row items-center gap-2 font-bold text-base-300 hover:text-accent transition',
         active ? 'text-base-400 hover:text-base-400' : '',
       )}
     >

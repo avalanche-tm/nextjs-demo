@@ -1,7 +1,7 @@
 function ContactPage() {
   return (
     <>
-      <div>ContactPage</div>
+      <div className='mx-22'>ContactPage</div>
     </>
   )
 }

@@ -1,7 +1,7 @@
 function MyLibraryPage() {
   return (
     <>
-      <div>MyLibraryPage</div>
+      <div className='mx-22'>MyLibraryPage</div>
     </>
   )
 }

@@ -1,7 +1,7 @@
 function PricingPage() {
   return (
     <>
-      <div>PricingPage</div>
+      <div className='mx-22'>PricingPage</div>
     </>
   )
 }

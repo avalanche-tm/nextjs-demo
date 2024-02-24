@@ -10,9 +10,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: '0.5rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': '1512px',
       },
     },
     extend: {
@@ -25,7 +25,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-roobert)'],
       },
-
+      spacing: {
+        22: '5.5rem',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

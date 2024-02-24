@@ -1,7 +1,7 @@
 function CommunityPage() {
   return (
     <>
-      <div>CommunityPage</div>
+      <div className='mx-22'>CommunityPage</div>
     </>
   )
 }

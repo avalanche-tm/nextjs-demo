@@ -18,7 +18,10 @@ function FavoriteButton({ className }: FavoriteButtonProps) {
       onClick={() => setIsFavorite(!isFavorite)}
       className={cn('rounded-full cursor-pointer hover:bg-base-100/50 p-2', className)}
     >
-      <Icon name='Heart' fill={isFavorite ? 'red' : 'none'} className='text-base-0' />
+      <Icon
+        name='Heart'
+        className={cn('text-base-0 fill-none', isFavorite && 'fill-accent')}
+      />
     </Button>
   )
 }

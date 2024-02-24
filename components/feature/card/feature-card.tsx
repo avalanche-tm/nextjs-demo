@@ -10,9 +10,16 @@ type FeatureCardProps = {
   href: string
   className?: string
   borderless?: boolean
+  gradient?: boolean
 }
 
-function FeatureCard({ feature, href, className, borderless }: FeatureCardProps) {
+function FeatureCard({
+  feature,
+  href,
+  className,
+  borderless,
+  gradient,
+}: FeatureCardProps) {
   return (
     <div
       className={cn(
@@ -34,6 +41,9 @@ function FeatureCard({ feature, href, className, borderless }: FeatureCardProps)
             fill={true}
             className='object-cover hover:scale-110 transition duration-500'
           />
+          {gradient && (
+            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/20'></div>
+          )}
         </div>
         <div className={cn('p-4 pb-5 space-y-1', borderless && 'pl-0')}>
           <div className='flex flex-row items-center text-xl font-bold text-base-400'>

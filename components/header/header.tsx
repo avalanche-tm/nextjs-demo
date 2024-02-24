@@ -3,13 +3,16 @@ import { Button } from '@/components/ui/button'
 import PersonImage from '@assets/images/person.png'
 import Logo from '@assets/logo.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Icon } from '../icon'
 import NavbarItem from './navbar-item'
 
 function Header() {
   return (
-    <header className='flex flex-row items-center justify-between py-2'>
-      <Logo />
+    <header className='flex flex-row items-center justify-between py-2 mx-22'>
+      <Link href='/'>
+        <Logo />
+      </Link>
       <nav>
         <ul className='flex flex-row items-center gap-6 text-xl '>
           <li>
@@ -40,9 +43,12 @@ function Header() {
         </ul>
       </nav>
       <div className='flex flex-row gap-2 items-center'>
-        <Button variant='secondary' className='rounded-full font-bold text-xl h-11'>
+        <Button
+          variant='secondary'
+          className='rounded-full font-bold text-xl h-[2.875rem]'
+        >
           <Icon name='CryptoCoinBold' className='mr-1' />
-          <span>32</span>
+          {32}
         </Button>
         <Avatar asChild={true}>
           <Image
