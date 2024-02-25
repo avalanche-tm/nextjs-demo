@@ -42,6 +42,7 @@ function FeatureCardCTA({ feature, href, className, onCTAClick }: FeatureCardCTA
             src={feature.imageUrl}
             alt={feature.voice}
             fill={true}
+            unoptimized
             className='object-cover hover:scale-110 transition duration-500'
           />
         </Link>
