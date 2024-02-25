@@ -1,6 +1,6 @@
 import heroImage from '@assets/images/hero/cover.png'
 import instagramImage from '@assets/images/hero/instagram.png'
-import tikTokImage from '@assets/images/hero/tiktok.svg?url'
+import TikTokLogo from '@assets/images/hero/tiktok.svg'
 import youtubeImage from '@assets/images/hero/youtube.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -28,7 +28,7 @@ function Hero() {
       <div className='hidden absolute bg-base-0 rounded-full -bottom-16 h-[7.5rem] w-[18.75rem] md:flex items-center justify-center flex-col space-y-2'>
         <div className='flex flex-row items-center gap-4'>
           <Link href='#'>
-            <Image src={tikTokImage} alt='tiktok' height='21' />
+            <TikTokLogo />
           </Link>
           <Link href='#'>
             <Image src={youtubeImage} alt='youtube' height='23' />
