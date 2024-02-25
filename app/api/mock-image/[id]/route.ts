@@ -6,11 +6,14 @@ import { join } from 'path'
 // the purpose of this endpoint is to mock serve images from the public folder
 const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp']
 
-export async function GET(req: NextRequest) {
+export const dynamic = 'force-dynamic'
+
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     // Extract the imageName from the URL
-    const { searchParams } = new URL(req.url)
-    const imageNameWithExtension = searchParams.get('img') || ''
+    // const { searchParams } = new URL(req.url)
+    // const imageNameWithExtension = searchParams.get('img') || ''
+    const imageNameWithExtension = `${params.id}.png` || ''
 
     // Retrieve the file extension and check if it is allowed
     const fileExt = imageNameWithExtension.split('.').pop() || ''
