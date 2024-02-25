@@ -22,12 +22,17 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     }
 
     // Construct the path to the requested image
-    const imagePath = join('./public/assets/images/voices', imageNameWithExtension)
-
+    const imagePath = join(
+      process.cwd(),
+      '/public/assets/images/voices',
+      imageNameWithExtension,
+    )
+    console.log('imagePath', imagePath)
     // Check if the image exists
     if (existsSync(imagePath)) {
       // Read the image file from the filesystem
       const imageBuffer = readFileSync(imagePath)
+      console.log('created image', params.id)
 
       // Set the correct headers for image content
       const headers = new Headers({ 'Content-Type': `image/${fileExt.toLowerCase()}` })
