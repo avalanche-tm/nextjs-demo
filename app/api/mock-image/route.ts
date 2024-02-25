@@ -6,8 +6,6 @@ import { join } from 'path'
 // the purpose of this endpoint is to mock serve images from the public folder
 const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp']
 
-export const dynamic = 'force-dynamic'
-
 export async function GET(req: NextRequest) {
   try {
     // Extract the imageName from the URL
