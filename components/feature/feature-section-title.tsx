@@ -19,7 +19,7 @@ function FeatureSectionTitle({
   return (
     <h3
       className={cn(
-        'flex flex-row items-center text-5.5xl text-base-400 font-black',
+        'flex flex-row items-center text-3xl sm:text-5xl lg:text-5.5xl text-base-400 font-black',
         className,
       )}
     >

@@ -48,14 +48,14 @@ const categories = [
 
 function CategoryList({ className }: { className?: string }) {
   return (
-    <div className={cn('flex flex-row gap-1 justify-center', className)}>
+    <div className={cn('flex flex-row gap-2 overflow-auto', className)}>
       {categories.map((category) => (
         <Link
           key={category.name}
           href='#'
           className={cn(
             buttonVariants({ variant: 'secondary' }),
-            'relative rounded-full font-bold text-base p-2 pr-3',
+            'relative flex-shrink-0 rounded-full font-bold text-base p-2 pr-3 first:ml-auto last:mr-auto',
           )}
         >
           <Image

@@ -42,7 +42,7 @@ function FeatureCard({
             className='object-cover hover:scale-110 transition duration-500'
           />
           {gradient && (
-            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/20'></div>
+            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none'></div>
           )}
         </div>
         <div className={cn('p-4 pb-5 space-y-1', borderless && 'pl-0')}>

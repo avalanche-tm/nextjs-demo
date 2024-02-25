@@ -22,16 +22,24 @@ async function HomePage() {
     <>
       <Hero />
       <CategoryList className='pt-6' />
-      <div className='mx-22'>
+      <div className='md:mx-22'>
         {/* Featured */}
-        <FeatureGrid className='mt-10'>
+
+        {/* Highlighted item */}
+        <FeatureCardCTA
+          href='#'
+          feature={featuredVoices[0]}
+          className='md:hidden mt-10'
+        />
+        {/* Rest of the items */}
+        <FeatureGrid className='mt-10 auto-rows-auto md:auto-rows-fr'>
           {featuredVoices.map((feature, idx) =>
             idx === 0 ? (
               <FeatureCardCTA
                 key={feature.voice}
                 href='#'
                 feature={feature}
-                className='col-span-3'
+                className='hidden md:flex md:col-span-2 lg:col-span-3'
               />
             ) : (
               <FeatureCard
@@ -40,6 +48,7 @@ async function HomePage() {
                 feature={feature}
                 borderless={false}
                 gradient={true}
+                className='w-60 md:w-auto'
               />
             ),
           )}
@@ -53,7 +62,7 @@ async function HomePage() {
           imageAlt='heart'
           className='mt-20 mb-8'
         />
-        <FeatureGrid>
+        <FeatureGrid className=''>
           {communityVoices.map((feature) => (
             <FeatureCard
               key={feature.voice}
@@ -61,6 +70,7 @@ async function HomePage() {
               feature={feature}
               borderless={true}
               gradient={true}
+              className='w-60 md:w-auto'
             />
           ))}
         </FeatureGrid>
@@ -73,13 +83,14 @@ async function HomePage() {
           imageAlt='note'
           className='mt-14 mb-8'
         />
-        <FeatureGrid>
+        <FeatureGrid className='grid-rows-2 md:grid-rows-none'>
           {moreVoices.map((feature) => (
             <FeatureCard
               key={feature.voice}
               href='#'
               feature={feature}
               borderless={true}
+              className='w-60 md:w-auto'
             />
           ))}
         </FeatureGrid>

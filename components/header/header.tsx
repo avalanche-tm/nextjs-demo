@@ -1,20 +1,74 @@
+'use client'
 import { Avatar } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import PersonImage from '@assets/images/person.png'
 import Logo from '@assets/logo.svg'
+import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { Icon } from '../icon'
 import NavbarItem from './navbar-item'
 
+// this component could have been broken into multiple smaller components
 function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsOpen(false)
+    })
+    return () => {
+      window.removeEventListener('resize', () => {
+        setIsOpen(false)
+      })
+    }
+  })
+
   return (
-    <header className='flex flex-row items-center justify-between py-2 mx-22'>
+    <header
+      className={cn(
+        'fixed top-0 z-30 bg-base-0 w-full -mx-2 px-2 lg:px-0 lg:static lg:w-auto flex flex-row items-center justify-between shadow-lg lg:shadow-none py-2 lg:mx-3 xl:mx-22',
+      )}
+    >
+      {/* Mobile menu toggle button */}
+      <button className='lg:hidden' onClick={toggleMenu}>
+        {isOpen ? (
+          <X
+            size={40}
+            strokeWidth={2}
+            strokeLinecap='square'
+            className='text-base-400 hover:text-accent transition'
+          />
+        ) : (
+          <Menu
+            size={40}
+            strokeWidth={2}
+            strokeLinecap='square'
+            className='text-base-400 hover:text-accent transition'
+          />
+        )}
+      </button>
+      {/* Logo */}
       <Link href='/'>
         <Logo />
       </Link>
-      <nav>
-        <ul className='flex flex-row items-center gap-6 text-xl '>
+      {/* Navbar */}
+      <nav
+        onClick={isOpen ? toggleMenu : undefined}
+        className={cn(
+          'bg-base-0 z-20 lg:static lg:flex',
+          isOpen
+            ? 'fixed top-[3.875rem] w-full h-full shadow-lg flex border-t border-base-400/10 -mx-2'
+            : 'hidden',
+        )}
+      >
+        <ul className='flex flex-col lg:flex-row lg:items-center gap-6 text-xl lg:p-0 p-4'>
           <li>
             <NavbarItem icon={<Icon name='Home' size='lg' />} href='/home'>
               Home
@@ -42,6 +96,7 @@ function Header() {
           </li>
         </ul>
       </nav>
+      {/* Avatar and credits*/}
       <div className='flex flex-row gap-2 items-center'>
         <Button
           variant='secondary'

@@ -3,11 +3,12 @@ import instagramImage from '@assets/images/hero/instagram.png'
 import tikTokImage from '@assets/images/hero/tiktok.svg?url'
 import youtubeImage from '@assets/images/hero/youtube.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Hero() {
   return (
-    <div className='relative flex justify-center mb-16'>
-      <div className='relative flex items-center justify-center h-[460px] w-full'>
+    <div className='relative flex justify-center mb-4 md:mb-16 mt-20 lg:mt-0'>
+      <div className='relative flex items-center justify-center h-80 md:h-[28.75rem] w-full'>
         <Image
           src={heroImage}
           alt='heroImg'
@@ -15,20 +16,26 @@ function Hero() {
           className='object-cover rounded-3xl'
         />
         <div className='absolute space-y-4 hero-gradient'>
-          <h1 className='text-center text-base-0 text-7.5xl leading-none font-black'>
+          <h1 className='text-center text-base-0 text-5xl md:text-6xl lg:text-7.5xl leading-none font-black'>
             Create song covers
             <br /> using any voice with AI
           </h1>
-          <h2 className='text-center text-base-0 font-semibold text-xl'>
+          <h2 className='hidden md:block text-center text-base-0 font-semibold text-base md:text-xl mx-2'>
             The #1 platform for making high quality AI covers in seconds!
           </h2>
         </div>
       </div>
-      <div className='absolute bg-base-0 rounded-full -bottom-16 h-[7.5rem] w-[18.75rem] flex items-center justify-center flex-col space-y-2'>
+      <div className='hidden absolute bg-base-0 rounded-full -bottom-16 h-[7.5rem] w-[18.75rem] md:flex items-center justify-center flex-col space-y-2'>
         <div className='flex flex-row items-center gap-4'>
-          <Image src={tikTokImage} alt='tiktok' height='21' />
-          <Image src={youtubeImage} alt='youtube' height='23' />
-          <Image src={instagramImage} alt='instagram' height='26' />
+          <Link href='#'>
+            <Image src={tikTokImage} alt='tiktok' height='21' />
+          </Link>
+          <Link href='#'>
+            <Image src={youtubeImage} alt='youtube' height='23' />
+          </Link>
+          <Link href='#'>
+            <Image src={instagramImage} alt='instagram' height='26' />
+          </Link>
         </div>
         <div className='font-semibold text-sm'>Voicify generated 100M+ views</div>
       </div>

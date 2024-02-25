@@ -4,9 +4,9 @@ import FooterLinkItem from './footer-link-item'
 
 function Footer() {
   return (
-    <footer className='border-t border-base-400/10 text-sm font-semibold py-10 mt-11 mx-22'>
-      <div className='grid grid-cols-4 gap-4'>
-        <div className='flex flex-col h-full items-bottom space-y-5'>
+    <footer className='border-t border-base-400/10 text-sm font-semibold py-10 mt-11 md:mx-22'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-10'>
+        <div className='flex flex-col h-full items-bottom space-y-5 '>
           <Link href='/home'>
             <Logo />
           </Link>
@@ -30,7 +30,7 @@ function Footer() {
             <FooterLinkItem href='#'>Cartoons</FooterLinkItem>
           </li>
         </ul>
-        <div className='flex flex-col'>
+        <div className='flex flex-col gap-10'>
           <ul className='space-y-3 flex-1'>
             <li>
               <FooterLinkItem href='#'>Pricing</FooterLinkItem>
