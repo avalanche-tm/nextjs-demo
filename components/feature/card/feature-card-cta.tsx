@@ -50,8 +50,8 @@ async function FeatureCardCTA({
             src={feature.imageUrl}
             alt={feature.voice}
             fill={true}
-            placeholder='blur'
-            blurDataURL={blurDataURL}
+            // placeholder='blur'
+            // blurDataURL={blurDataURL}
             unoptimized
             className='object-cover hover:scale-110 transition duration-500'
           />
