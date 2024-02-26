@@ -1,7 +1,8 @@
 import { getPlaiceholder } from 'plaiceholder'
 
 export async function getImagePlaceholder(src: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXT_PUBLIC_VERCEL_URL
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   const imgSrc = src
     ? `${baseUrl}${src}`
     : 'https://images.unsplash.com/photo-1621961458348-f013d219b50c'
