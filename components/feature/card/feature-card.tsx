@@ -44,6 +44,7 @@ async function FeatureCard({
             fill={true}
             placeholder='blur'
             blurDataURL={blurDataURL}
+            unoptimized
             className='object-cover hover:scale-110 transition duration-500'
           />
           {gradient && (
