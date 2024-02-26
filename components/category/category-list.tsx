@@ -62,7 +62,6 @@ function CategoryList({ className }: { className?: string }) {
             src={category.image}
             alt={category.name}
             className='rounded-full mr-1'
-            placeholder='blur'
             height={24}
             width={24}
           />
