@@ -1,5 +1,4 @@
 import { Feature } from '@/lib/feature/feature'
-import { getImagePlaceholder } from '@/lib/utils/get-image-placeholder'
 import { cn } from '@/lib/utils/tailwind-utils'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,7 +20,7 @@ async function FeatureCardCTA({
   className,
   onCTAClick,
 }: FeatureCardCTAProps) {
-  const blurDataURL = await getImagePlaceholder(feature.imageUrl)
+  // const blurDataURL = await getImagePlaceholder(feature.imageUrl)
 
   return (
     <div
