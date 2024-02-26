@@ -1,5 +1,5 @@
 import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils/tailwind-utils'
 import Anime from '@assets/images/categories/anime.png'
 import Cartoon from '@assets/images/categories/cartoon.png'
 import French from '@assets/images/categories/french.png'
@@ -62,6 +62,7 @@ function CategoryList({ className }: { className?: string }) {
             src={category.image}
             alt={category.name}
             className='rounded-full mr-1'
+            placeholder='blur'
             height={24}
             width={24}
           />

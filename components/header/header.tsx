@@ -1,7 +1,7 @@
 'use client'
 import { Avatar } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils/tailwind-utils'
 import PersonImage from '@assets/images/person.png'
 import Logo from '@assets/logo.svg'
 import { Menu, X } from 'lucide-react'
@@ -28,7 +28,7 @@ function Header() {
         setIsOpen(false)
       })
     }
-  })
+  }, [])
 
   return (
     <header
@@ -111,6 +111,7 @@ function Header() {
             alt='avatar'
             width={40}
             height={40}
+            placeholder='blur'
             className='cursor-pointer'
           />
         </Avatar>

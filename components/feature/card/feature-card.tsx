@@ -1,5 +1,6 @@
 import { Feature } from '@/lib/feature/feature'
-import { cn } from '@/lib/utils'
+import { getImagePlaceholder } from '@/lib/utils/get-image-placeholder'
+import { cn } from '@/lib/utils/tailwind-utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '../../icon'
@@ -13,13 +14,15 @@ type FeatureCardProps = {
   gradient?: boolean
 }
 
-function FeatureCard({
+async function FeatureCard({
   feature,
   href,
   className,
   borderless,
   gradient,
 }: FeatureCardProps) {
+  const blurDataURL = await getImagePlaceholder(feature.imageUrl)
+
   return (
     <div
       className={cn(
@@ -39,7 +42,8 @@ function FeatureCard({
             src={feature.imageUrl}
             alt={feature.voice}
             fill={true}
-            unoptimized
+            placeholder='blur'
+            blurDataURL={blurDataURL}
             className='object-cover hover:scale-110 transition duration-500'
           />
           {gradient && (

@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils/tailwind-utils'
 import Image, { StaticImageData } from 'next/image'
 
 type FeatureSectionTitleProps = {
@@ -19,11 +19,13 @@ function FeatureSectionTitle({
   return (
     <h3
       className={cn(
-        'flex flex-row items-center text-3xl sm:text-5xl lg:text-5.5xl text-base-400 font-black',
+        'flex flex-row items-center text-4xl sm:text-5xl lg:text-5.5xl text-base-400 font-black',
         className,
       )}
     >
-      <Image src={image} alt={imageAlt} className='mr-4' />
+      <div className='mr-4 h-12 w-12 md:h-auto md:w-auto'>
+        <Image src={image} alt={imageAlt} width={72} height={72} />
+      </div>
       {title}
       <span className='text-base-100 ml-3'>{itemCount}</span>
     </h3>

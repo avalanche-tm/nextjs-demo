@@ -21,18 +21,14 @@ async function HomePage() {
   return (
     <>
       <Hero />
-      <CategoryList className='pt-6' />
+      <CategoryList className='pt-6 pb-4 mb-6' />
       <div className='md:mx-22'>
         {/* Featured */}
 
         {/* Highlighted item */}
-        <FeatureCardCTA
-          href='#'
-          feature={featuredVoices[0]}
-          className='md:hidden mt-10'
-        />
+        <FeatureCardCTA href='#' feature={featuredVoices[0]} className='md:hidden' />
         {/* Rest of the items */}
-        <FeatureGrid className='mt-10 auto-rows-auto md:auto-rows-fr'>
+        <FeatureGrid className='auto-rows-auto md:auto-rows-fr'>
           {featuredVoices.map((feature, idx) =>
             idx === 0 ? (
               <FeatureCardCTA

@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils/tailwind-utils'
 import heroImage from '@assets/images/hero/cover.png'
 import instagramImage from '@assets/images/hero/instagram.png'
 import TikTokLogo from '@assets/images/hero/tiktok.svg'
@@ -5,14 +6,21 @@ import youtubeImage from '@assets/images/hero/youtube.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function Hero() {
+function Hero({ className }: { className?: string }) {
   return (
-    <div className='relative flex justify-center mb-4 md:mb-16 mt-20 lg:mt-0'>
+    <div
+      className={cn(
+        'relative flex justify-center mb-4 md:mb-16 mt-20 lg:mt-0',
+        className,
+      )}
+    >
       <div className='relative flex items-center justify-center h-80 md:h-[28.75rem] w-full'>
         <Image
           src={heroImage}
           alt='heroImg'
           fill={true}
+          placeholder='blur'
+          priority
           className='object-cover rounded-3xl'
         />
         <div className='absolute space-y-4 hero-gradient'>
