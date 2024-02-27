@@ -26,7 +26,7 @@ async function HomePage() {
         {/* Featured */}
 
         {/* Highlighted item */}
-        <FeatureCardCTA href='#' feature={featuredVoices[0]} className='md:hidden' />
+        <FeatureCardCTA href='#' feature={featuredVoices[0]} className='md:hidden mb-5' />
         {/* Rest of the items */}
         <FeatureGrid className='auto-rows-auto md:auto-rows-fr'>
           {featuredVoices.map((feature, idx) =>
